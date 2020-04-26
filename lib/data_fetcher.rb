@@ -1,5 +1,5 @@
 # module
-module IssueDataFetcher2
+module DataFetcher
   # Common condition of issue's select
   SQL_COM = <<-SQL_COM.freeze
   (issues.start_date IS NOT NULL AND issues.due_date IS NOT NULL)
@@ -34,5 +34,12 @@ module IssueDataFetcher2
     Issue.where(root_id: issue.root_id).
       where("lft > ? AND rgt < ?", issue.lft, issue.rgt).
       order(closed_on: :DESC).first
+  end
+
+  def project_in_member_id_name(member_id)
+    Project.where(status: 1).
+      where("members.user_id = ?", member_id).
+      joins(:members).
+      pluck(:id, :name)
   end
 end

@@ -1,3 +1,3 @@
-# Cross projet track with EVM
+# Track across project track with EVM
 
 work in progress

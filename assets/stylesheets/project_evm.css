@@ -6,7 +6,9 @@
 .option-col p {
   font-weight: bold;
 }
-
+.option-apply {
+  clear:both;
+}
 /*** summary evm indicator ***/
 #evm-indicator-table {
   border: 1px solid #bbb;
@@ -18,7 +20,7 @@
 }
 #evm-indicator-table td,
 #evm-indicator-table th {
-  width: 80px;
+  min-width: 80px;
   padding: 2px;
   text-align: center;
 }

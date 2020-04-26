@@ -1,5 +1,6 @@
-<table id="evm-indicator-table" border="1" bordercolor = "#bbb">
+<table id="evm-indicator-table" border="1">
   <tr>
+    <th><%= l(:project_duration) %></th>
     <th>BAC</th>
     <th>Complete EV</th>
     <th>PV</th>
@@ -11,6 +12,7 @@
     <th>CPI</th>
   </tr>
   <tr>
+    <td><%= format_date(evm.pv.start_date) %> - <%= format_date(evm.pv.due_date) %></td>
     <td><%= evm.bac %></td>
     <td><%= evm.complete_ev %></td>
     <td><%= evm.today_pv %></td>

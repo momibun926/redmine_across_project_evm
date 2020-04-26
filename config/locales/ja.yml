@@ -1,5 +1,6 @@
 ﻿# japanease translation
 ja:
   # main title
-  title_cross_project_evm: Cross project Track with EVM
+  title_cross_project_evm: Track across project with EVM
   option_basis_date: 報告日
+  project_duration: 予定期間
