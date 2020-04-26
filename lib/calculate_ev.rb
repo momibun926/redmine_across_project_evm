@@ -41,14 +41,6 @@ module CalculateEvmLogic
       @cumulative[@basis_date]
     end
 
-    # State
-    #
-    # @param [CalculatePv] calc_pv CalculatePv object
-    # @return [Numeric] EV value on basis date
-    def state(calc_pv = nil)
-      check_state(calc_pv)
-    end
-
     private
 
     # Calculate EV.

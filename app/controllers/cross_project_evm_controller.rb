@@ -8,28 +8,26 @@
 # 5. export to CSV
 #
 class CrossProjectEvmController < ApplicationController
+  include "IssueDataFetcher"
   # menu
   menu_item :projectevm
 
   # Before action
   before_action :find_project, :authorize
 
-  # View of main page.
-  # If the settings are not entry, go to the settings page.
-  #
-  # 1. set options of view request
-  # 2. get selectable list(baseline)
-  # 3. calculate EVM
-  # 4. fetch incomplete issues
-  # 5. export CSV
-  #
   def index
+    @projects_evm = {}
+    selected_projects = Projects.all
+    selected_projects.each do |proj|
+      issues = evm_issues proj.id
+      issues_costs = evm_costs proj.id
+      @project_evm[proj.id] = CalculateEvm.new issues, issues_costs
+      @project_evm[proj.id].description = proj.name
+    end
   end
 
   private
 
-  # find project object
-  #
   def find_project
     @project = Project.find(params[:project_id])
   rescue ActiveRecord::RecordNotFound
