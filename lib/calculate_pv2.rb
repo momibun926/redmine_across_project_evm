@@ -5,7 +5,7 @@ module CalculateEvmLogic2
   # Calculation PV class.
   # PV calculate estimate hours of issues.
   #
-  class CalculatePv2 < BaseCalculateEvm2
+  class CalculatePv2 < CalculateEvmLogic2::BaseCalculateEvm2
     # start date (exclude basis date)
     attr_reader :start_date
     # due date (exclude basis date)

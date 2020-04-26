@@ -5,8 +5,8 @@ module CalculateEvmLogic2
   # Calculation EV class.
   # EV calculate estimate time of finished issue
   #
-  class CalculateEv2 < BaseCalculateEvm2
-    include IssueDataFetcher
+  class CalculateEv2 < CalculateEvmLogic2::BaseCalculateEvm2
+    include IssueDataFetcher2
     # min date of spent time (exclude basis date)
     attr_reader :min_date
     # max date of spent time (exclude basis date)

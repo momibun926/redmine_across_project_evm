@@ -22,11 +22,11 @@ module CalculateEvmLogic2
     #
     def initialize(basis_date, issues, costs)
       # EV
-      @ev = CalculateEv2.new basis_date, issues
+      @ev = CalculateEvmLogic2::CalculateEv2.new basis_date, issues
       # AC
-      @ac = CalculateAc2.new basis_date, costs
+      @ac = CalculateEvmLogic2::CalculateAc2.new basis_date, costs
       # PV
-      @pv = CalculatePv2.new basis_date, issues
+      @pv = CalculateEvmLogic2::CalculatePv2.new basis_date, issues
     end
 
     # Badget at completion.

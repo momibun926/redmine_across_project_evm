@@ -1,3 +1,5 @@
-﻿en:
+﻿# english translation
+en:
   # main title
-  title_evm_tab: Track with EVM
+  title_cross_project_evm: Cross project Track with EVM
+  option_basis_date: Satus date

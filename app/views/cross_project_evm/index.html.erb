@@ -2,7 +2,7 @@
 <% content_for :header_tags do %>
   <%= stylesheet_link_tag "project_evm", plugin: "redmine_cross_project_evm" %>
 <% end %>
-<h2><%= l(:title_evm_tab) %></h2>
+<h2><%= l(:title_cross_project_evm) %></h2>
 <!-- Option -->
 <%= form_tag url_for(action: :index), method: :get, id: "query_form" do %>
   <fieldset id="filters" class="collapsible">
@@ -10,7 +10,7 @@
     <div style="display: none;">
       <!-- basis date -->
       <div class="option-col">
-        <p><%= l(:label_basis_date) %></p>
+        <p><%= l(:option_basis_date) %></p>
         <%= date_field_tag("basis_date", @basis_date, size: 8) %><%= calendar_for("basis_date") %>
       </div>
     </div>
@@ -24,6 +24,6 @@
 <% @projects_evm.each do |project_id, evm| %>
   <h3><%= evm.description %></h3>
   <p>
-  <%= render partial: "cross_project_evm/basic_evm_value", locals: { evm: evm } %>
+  <%= render partial: "cross_project_evm/evm_value", locals: { evm: evm } %>
   </p>
 <% end %>

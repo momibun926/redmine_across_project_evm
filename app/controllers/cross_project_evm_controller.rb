@@ -1,4 +1,7 @@
 # controller
+require "calculate_evm_logic2"
+require "issue_data_fetcher2"
+
 class CrossProjectEvmController < ApplicationController
   include IssueDataFetcher2
   include CalculateEvmLogic2
