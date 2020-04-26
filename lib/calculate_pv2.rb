@@ -91,14 +91,5 @@ module CalculateEvmLogic2
         issue_days
       end
     end
-
-    # Amount of working days.
-    #
-    # @param [date] start_date start date
-    # @param [date] end_date end date
-    # @return [Numeric] Amount of working days
-    def amount_working_days(start_date, end_date)
-      working_days(start_date, end_date).length
-    end
   end
 end

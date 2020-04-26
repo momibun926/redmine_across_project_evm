@@ -4,9 +4,9 @@
 <% end %>
 <h2><%= l(:title_cross_project_evm) %></h2>
 <!-- Option -->
-<%= render partial: "cross_project_evm/option_field"%>
+<%= render partial: "across_project_evm/option_field"%>
 <!-- EVM -->
 <% @projects_evm.each do |project_id, evm| %>
   <h3><%= project_link(project_id) %></h3>
-  <%= render partial: "cross_project_evm/evm_value", locals: { evm: evm } %>
+  <%= render partial: "across_project_evm/evm_value", locals: { evm: evm } %>
 <% end %>

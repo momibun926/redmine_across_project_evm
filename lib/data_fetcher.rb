@@ -36,10 +36,10 @@ module DataFetcher
       order(closed_on: :DESC).first
   end
 
-  def project_in_member_ids(member_id)
+  def project_ids_in_member(member_id)
     Project.where(status: 1).
       where("members.user_id = ?", member_id).
       joins(:members).
-      pluck(:id, :name)
+      pluck(:id)
   end
 end

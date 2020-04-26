@@ -9,7 +9,7 @@ class AcrossProjectEvmController < ApplicationController
   def index
     @basis_date = default_basis_date
     @projects_evm = {}
-    target_project_id_name = project_in_member_ids User.current.id
+    target_project_id_name = project_ids_in_member User.current.id
     target_project_id_name.each do |proj_id|
       issues = evm_issues proj_id
       issues_costs = evm_costs proj_id

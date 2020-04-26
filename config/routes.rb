@@ -1,4 +1,4 @@
 # routing
 Rails.application.routes.draw do
-  resources :cross_aproject_evm
+  resources :across_project_evm
 end
