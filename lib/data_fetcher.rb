@@ -36,7 +36,7 @@ module DataFetcher
       order(closed_on: :DESC).first
   end
 
-  def project_in_member_id_name(member_id)
+  def project_in_member_ids(member_id)
     Project.where(status: 1).
       where("members.user_id = ?", member_id).
       joins(:members).

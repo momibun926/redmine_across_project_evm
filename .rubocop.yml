@@ -40,9 +40,6 @@ Style/FrozenStringLiteralComment:
   Enabled: false
 
 Metrics/MethodLength:
-  Max: 20
-
-Metrics/MethodLength:
   Max: 30
 
 Layout/LineLength:
