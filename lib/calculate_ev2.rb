@@ -1,11 +1,11 @@
-require "base_calculate"
+require "base_calculate2"
 
 # Calculation EVM module
-module CalculateEvmLogic
+module CalculateEvmLogic2
   # Calculation EV class.
   # EV calculate estimate time of finished issue
   #
-  class CalculateEv < BaseCalculateEvm
+  class CalculateEv2 < BaseCalculateEvm2
     include IssueDataFetcher
     # min date of spent time (exclude basis date)
     attr_reader :min_date

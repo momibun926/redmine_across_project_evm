@@ -1,12 +1,12 @@
-require "calculate_pv"
-require "calculate_ev"
-require "calculate_ac"
+require "calculate_pv2"
+require "calculate_ev2"
+require "calculate_ac2"
 
 # Calculation EVM module
-module CalculateEvmLogic
+module CalculateEvmLogic2
   # Calculation EVM class.
   # Calculate EVM and create data for chart
-  class CalculateEvm
+  class CalculateEvm2
     # Basis date
     attr_reader :basis_date
     # calculation PV class ojbject, basis
@@ -20,15 +20,13 @@ module CalculateEvmLogic
 
     # Constractor
     #
-    # @param [Issue] issues
-    # @param [hash] costs spent time.
-    def initialize(issues, costs)
+    def initialize(basis_date, issues, costs)
       # EV
-      @ev = CalculateEv.new @basis_date, issues
+      @ev = CalculateEv2.new basis_date, issues
       # AC
-      @ac = CalculateAc.new @basis_date, costs
+      @ac = CalculateAc2.new basis_date, costs
       # PV
-      @pv = CalculatePv.new @basis_date, issues
+      @pv = CalculatePv2.new basis_date, issues
     end
 
     # Badget at completion.

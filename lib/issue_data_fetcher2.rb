@@ -2,7 +2,7 @@
 # This module is a function to collect ISSUE records necessary to calculate EVM
 # It also collects a selectable list that is optionally specified
 #
-module IssueDataFetcher
+module IssueDataFetcher2
   # Common condition of issue's select
   SQL_COM = <<-SQL_COM.freeze
   (issues.project_id = ?)

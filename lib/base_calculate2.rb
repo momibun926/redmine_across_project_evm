@@ -1,9 +1,9 @@
 # Calculation EVM module
-module CalculateEvmLogic
+module CalculateEvmLogic2
   # Calculation EVM base class.
   # This class is base class of calculate AC, EV, PV(issues, baseline)
   #
-  class BaseCalculateEvm
+  class BaseCalculateEvm2
     # Basis date
     attr_reader :basis_date
     # daily element

@@ -1,11 +1,11 @@
-require "base_calculate"
+require "base_calculate2"
 
 # Calculation EVM module
-module CalculateEvmLogic
+module CalculateEvmLogic2
   # Calculation AC class.
   # AC calculate Spent time of pv issues.
   #
-  class CalculateAc < BaseCalculateEvm
+  class CalculateAc2 < BaseCalculateEvm2
     # min date of spent time (exclude basis date)
     attr_reader :min_date
     # max date of spent time (exclude basis date)
