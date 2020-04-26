@@ -1,7 +1,7 @@
-# controller
 require "calculate_evm_logic2"
 require "issue_data_fetcher2"
 
+# controller
 class CrossProjectEvmController < ApplicationController
   include IssueDataFetcher2
   include CalculateEvmLogic2
@@ -16,7 +16,7 @@ class CrossProjectEvmController < ApplicationController
     selected_projects.each do |proj_id, proj_name|
       issues = evm_issues proj_id
       issues_costs = evm_costs proj_id
-      @projects_evm[proj_id] = CalculateEvm2.new @basis_date, issues, issues_costs
+      @projects_evm[proj_id] = CalculateEvmLogic2::CalculateEvm2.new @basis_date, issues, issues_costs
       @projects_evm[proj_id].description = proj_name
     end
   end
