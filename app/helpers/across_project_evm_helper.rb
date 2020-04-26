@@ -1,5 +1,5 @@
 # parent issue helper
-module CrossProjectEvmHelper
+module AcrossProjectEvmHelper
 
   def project_link(proj_id)
     proj = Project.find(proj_id)

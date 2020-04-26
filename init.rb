@@ -1,17 +1,17 @@
 require "redmine"
 
 # module define
-Redmine::Plugin.register :redmine_cross_project_evm do
-  name "Redmine Cross Project EVM Plugin"
+Redmine::Plugin.register :redmine_across_project_evm do
+  name "Redmine Tarck across Project with EVM"
   author "Hajime Nakagama"
-  description "Earned value management calculation for cross project plugin."
+  description "Earned value management calculation for across project plugin."
   version "0.0.1"
-  requires_redmine "4.0"
-  url "https://github.com/momibun926/redmine_cross_project_evm"
+  requires_redmine "3.4"
+  url "https://github.com/momibun926/redmine_across_project_evm"
   author_url "https://github.com/momibun926"
 
   # menu
   menu :application_menu,
-       :Projectevm, { controller: :cross_project_evm, action: :index },
-       caption: "Cross project EVM"
+       :Projectevm, { controller: :across_project_evm, action: :index },
+       caption: :across_project_evm
 end

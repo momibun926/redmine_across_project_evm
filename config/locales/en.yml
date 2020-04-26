@@ -1,5 +1,7 @@
 ﻿# english translation
 en:
+  # menu title
+  across_project_evm: Across project EVM
   # main title
   title_cross_project_evm: Track across project with EVM
   option_basis_date: Satus date

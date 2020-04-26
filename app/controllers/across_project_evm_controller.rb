@@ -2,7 +2,7 @@ require "calculate_evm_logic2"
 require "data_fetcher"
 
 # controller
-class CrossProjectEvmController < ApplicationController
+class AcrossProjectEvmController < ApplicationController
   include DataFetcher
   include CalculateEvmLogic2
 
