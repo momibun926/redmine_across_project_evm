@@ -35,11 +35,4 @@ module DataFetcher
       where("lft > ? AND rgt < ?", issue.lft, issue.rgt).
       order(closed_on: :DESC).first
   end
-
-  def project_ids_in_member(member_id)
-    Project.where(status: 1).
-      where("members.user_id = ?", member_id).
-      joins(:members).
-      pluck(:id)
-  end
 end
