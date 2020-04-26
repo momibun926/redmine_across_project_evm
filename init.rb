@@ -10,10 +10,8 @@ Redmine::Plugin.register :redmine_cross_project_evm do
   url "https://github.com/momibun926/redmine_cross_project_evm"
   author_url "https://github.com/momibun926"
 
-  # permission :view_cross_project_evm, cross_project_evm: :index, require: :member
-
   # menu
   menu :application_menu,
        :Projectevm, { controller: :cross_project_evm, action: :index },
-       caption: "test menu name"
+       caption: "Cross project EVM"
 end

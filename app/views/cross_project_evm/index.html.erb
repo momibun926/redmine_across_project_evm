@@ -23,7 +23,5 @@
 <!-- EVM -->
 <% @projects_evm.each do |project_id, evm| %>
   <h3><%= evm.description %></h3>
-  <p>
   <%= render partial: "cross_project_evm/evm_value", locals: { evm: evm } %>
-  </p>
 <% end %>
