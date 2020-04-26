@@ -1,3 +1,4 @@
+# module
 module IssueDataFetcher2
   # Common condition of issue's select
   SQL_COM = <<-SQL_COM.freeze

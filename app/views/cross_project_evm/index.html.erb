@@ -1,4 +1,26 @@
 <% html_title("Project tracking with EVM") %>
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag "project_evm", plugin: "redmine_cross_project_evm" %>
+<% end %>
+<h2><%= l(:title_evm_tab) %></h2>
+<!-- Option -->
+<%= form_tag url_for(action: :index), method: :get, id: "query_form" do %>
+  <fieldset id="filters" class="collapsible">
+    <legend onclick="toggleFieldset(this);" class="icon icon-collapsed"><%= l(:label_options) %></legend>
+    <div style="display: none;">
+      <!-- basis date -->
+      <div class="option-col">
+        <p><%= l(:label_basis_date) %></p>
+        <%= date_field_tag("basis_date", @basis_date, size: 8) %><%= calendar_for("basis_date") %>
+      </div>
+    </div>
+  </fieldset>
+  <p class="buttons">
+    <%= link_to "#", {onclick: "$(this).closest('form').submit()", class: "icon icon-checked" } do l(:button_apply) end %>
+    <%= link_to l(:button_clear), { basis_date: Time.current.to_date }, :class => "icon icon-reload"  %>
+  </p>
+<% end %>
+<!-- EVM -->
 <% @projects_evm.each do |project_id, evm| %>
   <h3><%= evm.description %></h3>
   <p>
