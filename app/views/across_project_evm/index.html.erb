@@ -1,0 +1,12 @@
+<% html_title("Track across project with EVM") %>
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag "project_evm", plugin: "redmine_cross_project_evm" %>
+<% end %>
+<h2><%= l(:title_cross_project_evm) %></h2>
+<!-- Option -->
+<%= render partial: "across_project_evm/option_field"%>
+<!-- EVM -->
+<% @projects_evm.each do |project_id, evm| %>
+  <h3><%= project_link(project_id) %></h3>
+  <%= render partial: "across_project_evm/evm_value", locals: { evm: evm } %>
+<% end %>

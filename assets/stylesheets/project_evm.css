@@ -1,0 +1,26 @@
+/*** Option ***/
+.option-col {
+  padding: 0px 30px 0px 5px;
+  float: left;
+}
+.option-col p {
+  font-weight: bold;
+}
+.option-apply {
+  clear:both;
+}
+/*** summary evm indicator ***/
+#evm-indicator-table {
+  border: 1px solid #bbb;
+  width: auto;
+  border-collapse: collapse;
+}
+#evm-indicator-table th {
+  background-color: #eee;
+}
+#evm-indicator-table td,
+#evm-indicator-table th {
+  min-width: 80px;
+  padding: 2px;
+  text-align: center;
+}
