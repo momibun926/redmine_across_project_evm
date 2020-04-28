@@ -73,7 +73,7 @@ Exclude weekends.
 **Case of git clone.**
 
 ```
-git clone htpps://github.com/momibun926/redmine_across_project_evm [redmine_root]/plugins/redmine_across_project_evm
+git clone https://github.com/momibun926/redmine_across_project_evm [redmine_root]/plugins/redmine_across_project_evm
 ```
 
 (2) Restart your Redmine web servers (e.g. mongrel, thin, mod_rails).
