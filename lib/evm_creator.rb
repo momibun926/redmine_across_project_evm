@@ -23,7 +23,6 @@ module EvmCreator
     active_projects.each do |proj|
       ids << proj.id if User.current.member_of?(proj)
     end
-    Rails.logger.info(ids)
     ids
   end
 end
