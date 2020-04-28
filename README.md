@@ -1,5 +1,5 @@
 # Track across project with EVM
-Caluclate EVM value of avaiｌable(open) projects in login user.
+Caluclate EVM value of available(open) projects in login user.
 
 ## Current Version
 0.0.1
