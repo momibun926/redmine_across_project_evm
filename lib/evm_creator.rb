@@ -18,9 +18,11 @@ module EvmCreator
   end
 
   def project_ids_in_member(member_id)
-    Project.where(status: 1).
-      where("members.user_id = ?", member_id).
-      joins(:members).
-      pluck(:id)
+    ids = []
+    active_projects = Project.where("#{Project.table_name}.status = ?", 1)
+    active_projects.each do |proj|
+      ids << active_projects.first.id if User.current.member_of?(proj)
+    end
+    ids
   end
 end
