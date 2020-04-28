@@ -84,12 +84,8 @@ module CalculateEvmLogic2
     # @return [Array] working days
     def working_days(start_date, end_date)
       issue_days = (start_date..end_date).to_a
-      if @holiday_exclude
-        working_days = issue_days.reject { |e| e.wday.zero? || e.wday == 6 }
-        working_days.length.zero? ? issue_days : working_days
-      else
-        issue_days
-      end
+      working_days = issue_days.reject { |e| e.wday.zero? || e.wday == 6 }
+      working_days.length.zero? ? issue_days : working_days
     end
   end
 end
