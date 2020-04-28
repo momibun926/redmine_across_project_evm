@@ -6,7 +6,7 @@ class AcrossProjectEvmController < ApplicationController
 
   def index
     @basis_date = default_basis_date
-    @projects_evm = evm_create @basis_date, User.current.id
+    @projects_evm = evm_create @basis_date
   end
 
   private
