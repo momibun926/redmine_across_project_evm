@@ -10,4 +10,4 @@ ja:
   option_working_hours_per_day: 1日の作業時間
   # unit of EVM value
   unit_evm_hours: EVM値は時間
-  unit_evm_days: EVMは日数
+  unit_evm_days: EVM値は日数
