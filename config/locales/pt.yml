@@ -8,3 +8,6 @@ pt:
   # option
   option_basis_date: Data do relatório
   option_working_hours_per_day: Horas de trabalho por dia
+  # unit of EVM value
+  unit_evm_hours: O valor EVM é horas
+  unit_evm_days: O valor EVM é dias

@@ -8,4 +8,6 @@ en:
   # option
   option_basis_date: Satus date
   option_working_hours_per_day: Working hours per day
-  
+  # unit of EVM value
+  unit_evm_hours: EVM value is hours
+  unit_evm_days: EVM value is days

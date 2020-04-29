@@ -8,4 +8,6 @@ fr:
   # option
   option_basis_date: Date du rapport
   option_working_hours_per_day: Heures de travail par jour
-  
+  # unit of EVM value
+  unit_evm_hours: La valeur EVM est en heures
+  unit_evm_days: La valeur EVM est en jours
