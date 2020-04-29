@@ -30,6 +30,7 @@ module AcrossProjectEvmHelper
     content_tag(:td, value, class: project_duration_color(basis_date, evm))
   end
 
+  # duration color
   def project_duration_color(basis_date, evm)
     if evm.project_status != Project::STATUS_ACTIVE
       ""
