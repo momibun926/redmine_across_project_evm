@@ -4,5 +4,7 @@ zh:
   across_project_evm: Across project EVM
   # main title
   title_cross_project_evm: Track across project with EVM
-  option_basis_date: 狀態日期
   project_duration: 預定期間
+  # option
+  option_basis_date: 狀態日期
+  option_working_hours_per_day: 每天工作時間

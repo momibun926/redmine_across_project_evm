@@ -8,5 +8,7 @@
 <!-- EVM -->
 <% @projects_evm.each do |project_id, evm| %>
   <h3><%= project_link(project_id) %></h3>
-  <%= render partial: "across_project_evm/evm_value", locals: { evm: evm } %>
+  <%= render partial: "across_project_evm/evm_value",
+             locals: { evm: evm,
+                       working_hours_per_day: @working_hours_per_day } %>
 <% end %>

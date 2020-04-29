@@ -4,5 +4,7 @@ ja:
   across_project_evm: Across project EVM
   # main title
   title_cross_project_evm: Track across project with EVM
-  option_basis_date: 報告日
   project_duration: 予定期間
+  # option
+  option_basis_date: 報告日
+  option_working_hours_per_day: 1日の作業時間

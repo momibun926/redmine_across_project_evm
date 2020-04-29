@@ -4,5 +4,8 @@ fr:
   across_project_evm: Across project EVM
   # main title
   title_cross_project_evm: Track across project with EVM
-  option_basis_date: Date du rapport
   project_duration: Période planifiée
+  # option
+  option_basis_date: Date du rapport
+  option_working_hours_per_day: Heures de travail par jour
+  
