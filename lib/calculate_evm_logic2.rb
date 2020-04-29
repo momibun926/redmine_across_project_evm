@@ -17,6 +17,8 @@ module CalculateEvmLogic2
     attr_reader :ac
     # project name
     attr_accessor :project_name
+    # project status
+    attr_accessor :project_status
 
     # Constractor
     #

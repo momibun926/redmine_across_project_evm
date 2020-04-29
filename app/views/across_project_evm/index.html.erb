@@ -7,11 +7,12 @@
 <%= render partial: "across_project_evm/option_field"%>
 <!-- Explanation of unit -->
 <br>
-<%= explanation_of_unit @working_hours_per_day %>
+<%= explanation_of_unit(@working_hours_per_day) %>
 <!-- EVM -->
 <% @projects_evm.each do |project_id, evm| %>
-  <h3><%= project_link project_id, evm.project_name %></h3>
+  <h3><%= project_link(project_id, evm.project_name) %> <span style="font-size: 80%"><%= project_status_name(evm.project_status) %></span></h3>
   <%= render partial: "across_project_evm/evm_value",
              locals: { evm: evm,
                        working_hours_per_day: @working_hours_per_day } %>
 <% end %>
+>

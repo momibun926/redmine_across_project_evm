@@ -17,4 +17,10 @@ module AcrossProjectEvmHelper
      [l(:project_status_closed), Project::STATUS_CLOSED],
      [l(:project_status_archived), Project::STATUS_ARCHIVED]]
   end
+
+  # project status name
+  def project_status_name(status)
+    h = Hash[*selectable_project_status.flatten]
+    h.invert[status]
+  end
 end
