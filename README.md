@@ -1,5 +1,7 @@
 # Track across project with EVM
-Caluclate EVM value of available(open) projects in login user.
+Calculate the EVM for the following projects
+* Projects in which you are a member
+* Projects with open status
 
 ## Current Version
 0.0.2
@@ -61,6 +63,7 @@ Based on these data, EVM and chart are created.
 ## About workig days
 Include weekends.
 Same as if the "Exclude holidays and weekends in duration of days calculation" in redmine_issue_evm plugin is no checked
+
 https://github.com/momibun926/redmine_issue_evm
 
 # Installation
