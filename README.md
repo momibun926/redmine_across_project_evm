@@ -83,6 +83,14 @@ git clone https://github.com/momibun926/redmine_across_project_evm [redmine_root
 
 (2) Restart your Redmine web servers (e.g. mongrel, thin, mod_rails).
 
+(3) Click "Project" in top menu
+
+![sample screenshot](./images/screenshot01.png "topmenu")
+
+(4) Click "Across project EVM" in application menu
+
+![sample screenshot](./images/screenshot02.png "Application menu")
+
 # UnInstall
 ```
 rake redmine:plugins:migrate NAME=redmine_across_project_evm VERSION=0
