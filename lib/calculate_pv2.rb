@@ -83,7 +83,7 @@ module CalculateEvmLogic2
     # @param [date] end_date end date of issue
     # @return [Array] working days
     def working_days(start_date, end_date)
-      issue_days = (start_date..end_date).to_a
+      (start_date..end_date).to_a
     end
   end
 end

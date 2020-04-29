@@ -1,8 +1,8 @@
-﻿# chinese translation
-zh:
+# french translation
+fr:
   # menu title
   across_project_evm: Across project EVM
   # main title
   title_cross_project_evm: Track across project with EVM
-  option_basis_date: 狀態日期
-  project_duration: 預定期間
+  option_basis_date: Date du rapport
+  project_duration: Période planifiée
