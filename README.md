@@ -4,7 +4,7 @@ Calculate the EVM for the following projects and can dawonload csv file.
 * Any status of the project
 
 ## Current Version
-0.0.5
+1.0.0
 
 ## Compatibility
 Redmine 3.4.0 and above
@@ -13,7 +13,7 @@ Redmine 3.4.0 and above
 
 ### Status date
 
-You can enter the base date for calculating the EVM value.
+You can enter the base date for calculating the EVMa value.
 
 ### Working hours per day
 
@@ -71,8 +71,6 @@ PV: Dividing estimated time: 24hours by 3 days (from start date to due date)
 | PV  | 8   | 16  | 24  |
 | EV  | 0   | 0   | 24  |
 | AC  | 10  | 16  | 24  |
-
-Based on these data, EVM and chart are created.
 
 ## About workig days
 Include weekends.
