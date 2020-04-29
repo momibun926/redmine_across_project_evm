@@ -23,4 +23,20 @@ module AcrossProjectEvmHelper
     h = Hash[*selectable_project_status.flatten]
     h.invert[status]
   end
+
+  # project duration with font color
+  def project_duration(basis_date, evm)
+    value = "#{format_date(evm.pv.start_date)} - #{format_date(evm.pv.due_date)}"
+    content_tag(:td, value, class: project_duration_color(basis_date, evm))
+  end
+
+  def project_duration_color(basis_date, evm)
+    if evm.project_status != Project::STATUS_ACTIVE
+      ""
+    elsif evm.pv.due_date < basis_date
+      "duration-indicator-red"
+    else
+      ""
+    end
+  end
 end

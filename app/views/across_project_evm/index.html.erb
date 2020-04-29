@@ -13,6 +13,6 @@
   <h3><%= project_link(project_id, evm.project_name) %> <span style="font-size: 80%"><%= project_status_name(evm.project_status) %></span></h3>
   <%= render partial: "across_project_evm/evm_value",
              locals: { evm: evm,
+                       basis_date: @basis_date,
                        working_hours_per_day: @working_hours_per_day } %>
 <% end %>
->
