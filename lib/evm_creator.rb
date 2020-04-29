@@ -9,22 +9,18 @@ module EvmCreator
   # Culculation of EMM
   def evm_create(basis_date)
     projects_evm = {}
-    target_project_ids = project_ids_in_member
-    target_project_ids.each do |proj_id|
-      issues = evm_issues proj_id
-      issues_costs = evm_costs proj_id
-      projects_evm[proj_id] = CalculateEvmLogic2::CalculateEvm2.new basis_date, issues, issues_costs
+    projects = target_projects Project::STATUS_ACTIVE
+    projects.each do |proj|
+      issues = evm_issues proj.id
+      issues_costs = evm_costs proj.id
+      projects_evm[proj.id] = CalculateEvmLogic2::CalculateEvm2.new basis_date, issues, issues_costs
+      projects_evm[proj.id].project_name = proj.name
     end
     projects_evm
   end
 
-  # Project of which the logged-in user is a member
-  def project_ids_in_member
-    ids = []
-    active_projects = Project.where("#{Project.table_name}.status = ?", 1)
-    active_projects.each do |proj|
-      ids << proj.id if User.current.member_of?(proj)
-    end
-    ids
+  def target_projects(status)
+    Project.where(status: status).
+      where("projects.id IN (select project_id FROM members WHERE user_id = ?)", User.current.id)
   end
 end

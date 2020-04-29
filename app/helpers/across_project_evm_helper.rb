@@ -1,9 +1,8 @@
 # parent issue helper
 module AcrossProjectEvmHelper
   # link of target project
-  def project_link(proj_id)
-    proj = Project.find(proj_id)
-    link_to(proj.name, project_path(proj))
+  def project_link(proj_id, proj_name)
+    link_to(proj_name, project_path(proj_id))
   end
 
   # unit

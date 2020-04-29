@@ -15,6 +15,8 @@ module CalculateEvmLogic2
     attr_reader :ev
     # calculation AC class ojbject
     attr_reader :ac
+    # project name
+    attr_accessor :project_name
 
     # Constractor
     #
