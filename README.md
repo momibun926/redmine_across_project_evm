@@ -1,10 +1,10 @@
 # Track across project with EVM
-Calculate the EVM for the following projects
+Calculate the EVM for the following projects and can dawonload csv file.
 * Projects in which you are a member
 * Any status of the project
 
 ## Current Version
-0.0.4
+0.0.5
 
 ## Compatibility
 Redmine 3.4.0 and above
