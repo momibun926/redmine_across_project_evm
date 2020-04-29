@@ -8,6 +8,7 @@ ja:
   # option
   option_basis_date: 報告日
   option_working_hours_per_day: 1日の作業時間
+  option_target_project_status: プロジェクトのステータス
   # unit of EVM value
   unit_evm_hours: EVM値は時間
   unit_evm_days: EVM値は日数

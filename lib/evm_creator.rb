@@ -7,9 +7,9 @@ module EvmCreator
   include DataFetcher
 
   # Culculation of EMM
-  def evm_create(basis_date)
+  def evm_create(basis_date, selected_status)
     projects_evm = {}
-    projects = target_projects Project::STATUS_ACTIVE
+    projects = target_projects selected_status
     projects.each do |proj|
       issues = evm_issues proj.id
       issues_costs = evm_costs proj.id
