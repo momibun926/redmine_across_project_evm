@@ -19,5 +19,5 @@
 <% end %>
 <!-- CSV download -->
 <% other_formats_links do |f| %>
-  <%= f.link_to "CSV", :url => {:action => :index} %>
+  <%= f.link_to "CSV", url: {action: :index, params: params} %>
 <% end %>
