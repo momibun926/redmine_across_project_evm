@@ -19,5 +19,5 @@
 <% end %>
 <!-- CSV download -->
 <% other_formats_links do |f| %>
-  <%= f.link_to "CSV", url: {action: :index, params: params} %>
+  <%= f.link_to "CSV", url: { action: :index, params: params.permit(:basis_date, :working_hours_per_day) } %>
 <% end %>
