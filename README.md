@@ -1,8 +1,8 @@
 # Track across project with EVM
-Caluclate EVM value of avaiｌable(open) projects in login user.
+Caluclate EVM value of available(open) projects in login user.
 
 ## Current Version
-0.0.1
+0.0.2
 
 ## Compatibility
 Redmine 3.4.0 and above
@@ -93,10 +93,10 @@ rake redmine:plugins:migrate NAME=redmine_across_project_evm VERSION=0
 5. Create new Pull Request
 
 # My Environment
-*  Redmine version                4.1.0.stable.19704
-*  Ruby version                   2.7.0-p0 (2019-12-25) [x86_64-linux]
-*  Rails version                  5.2.4.1
+*  Redmine version                4.1.1.stable.19730
+*  Ruby version                   2.6.0-p0 (2018-12-25) [x86_64-linux]
+*  Rails version                  5.2.4.2
 *  Environment                    production
-*  Database adapter               Mysql2
+*  Database adapter               PostgreSQL
 *  Mailer queue                   ActiveJob::QueueAdapters::AsyncAdapter
 *  Mailer delivery                smtp

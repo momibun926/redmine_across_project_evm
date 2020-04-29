@@ -1,11 +1,12 @@
 require "calculate_evm_logic2"
 require "data_fetcher"
 
-# module
+# EVM creator module
 module EvmCreator
   include CalculateEvmLogic2
   include DataFetcher
 
+  # Culculation of EMM
   def evm_create(basis_date)
     projects_evm = {}
     target_project_ids = project_ids_in_member
@@ -17,6 +18,7 @@ module EvmCreator
     projects_evm
   end
 
+  # Project of which the logged-in user is a member
   def project_ids_in_member
     ids = []
     active_projects = Project.where("#{Project.table_name}.status = ?", 1)
