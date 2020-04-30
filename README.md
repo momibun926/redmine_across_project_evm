@@ -4,10 +4,20 @@ Calculate the EVM for the following projects
 * Projects with open status
 
 ## Current Version
-0.0.2
+0.0.3
 
 ## Compatibility
 Redmine 3.4.0 and above
+
+# View option
+
+### status date
+
+You can enter the base date for calculating the EVM value.
+
+### Working hours per day
+
+Enter the working hours per day and the EVM value will be displayed in days. You can set 7.0 to 8.0 hours. Otherwise, it is calculated as 1.0.
 
 # How to calculate EVM
 The below are used for EVM.

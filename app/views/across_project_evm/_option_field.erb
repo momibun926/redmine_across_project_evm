@@ -5,13 +5,18 @@
       <!-- basis date -->
       <div class="option-col">
         <p><%= l(:option_basis_date) %></p>
-        <%= date_field_tag("basis_date", @basis_date, size: 8) %><%= calendar_for("basis_date") %>
+        <%= date_field_tag :basis_date, @basis_date, size: 8 %><%= calendar_for("basis_date") %>
+      </div>
+      <!-- basis date -->
+      <div class="option-col">
+        <p><%= l(:option_working_hours_per_day) %></p>
+        <%= number_field_tag :working_hours_per_day, @working_hours_per_day, min: 7.0, max: 8.0, step: 0.1 %><br>
       </div>
     </div>
   </fieldset>
   <!-- Apply button -->
   <p class="buttons">
     <%= link_to "#", {onclick: "$(this).closest('form').submit()", class: "icon icon-checked" } do l(:button_apply) end %>
-    <%= link_to l(:button_clear), { basis_date: Date.today }, :class => "icon icon-reload"  %>
+    <%= link_to l(:button_clear), { basis_date: Time.current.to_date }, :class => "icon icon-reload"  %>
   </p>
 <% end %>

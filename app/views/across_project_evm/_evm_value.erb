@@ -13,15 +13,15 @@
   </tr>
   <tr>
     <td><%= format_date(evm.pv.start_date) %> - <%= format_date(evm.pv.due_date) %></td>
-    <td><%= evm.bac %></td>
-    <td><%= evm.complete_ev %></td>
-    <td><%= evm.today_pv %></td>
-    <td><%= evm.today_ev %></td>
-    <td><%= evm.today_ac %></td>
-    <td><%= evm.today_sv %></td>
-    <td><%= evm.today_cv %></td>
-    <td><%= evm.today_spi %></td>
-    <td><%= evm.today_cpi %></td>
+    <td><%= evm.bac(working_hours_per_day) %></td>
+    <td><%= evm.complete_ev(working_hours_per_day) %></td>
+    <td><%= evm.today_pv(working_hours_per_day) %></td>
+    <td><%= evm.today_ev(working_hours_per_day) %></td>
+    <td><%= evm.today_ac(working_hours_per_day) %></td>
+    <td><%= evm.today_sv(working_hours_per_day) %></td>
+    <td><%= evm.today_cv(working_hours_per_day) %></td>
+    <td><%= evm.today_spi(working_hours_per_day) %></td>
+    <td><%= evm.today_cpi(working_hours_per_day) %></td>
   </tr>
 </table>
 <br>
