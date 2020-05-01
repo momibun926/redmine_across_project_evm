@@ -8,6 +8,7 @@ en:
   # option
   option_basis_date: Satus date
   option_working_hours_per_day: Working hours per day
+  option_target_project_status: Status of project
   # unit of EVM value
   unit_evm_hours: EVM value is hours
   unit_evm_days: EVM value is days

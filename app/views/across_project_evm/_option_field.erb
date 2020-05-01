@@ -7,10 +7,19 @@
         <p><%= l(:option_basis_date) %></p>
         <%= date_field_tag :basis_date, @basis_date, size: 8 %><%= calendar_for("basis_date") %>
       </div>
-      <!-- basis date -->
+      <!-- working hours per day -->
       <div class="option-col">
         <p><%= l(:option_working_hours_per_day) %></p>
-        <%= number_field_tag :working_hours_per_day, @working_hours_per_day, min: 7.0, max: 8.0, step: 0.1 %><br>
+        <%= number_field_tag :working_hours_per_day,
+                              @working_hours_per_day,
+                              min: 7.0, max: 8.0, step: 0.1 %><br>
+      </div>
+      <!-- project status -->
+      <div class="option-col">
+        <p><%= l(:option_target_project_status) %></p>
+        <%= select_tag :selected_status,
+                       options_for_select(selectable_project_status, @selected_status),
+                       { multiple: true, size: 3 }%>
       </div>
     </div>
   </fieldset>

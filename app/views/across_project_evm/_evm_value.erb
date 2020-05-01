@@ -12,7 +12,7 @@
     <th>CPI</th>
   </tr>
   <tr>
-    <td><%= format_date(evm.pv.start_date) %> - <%= format_date(evm.pv.due_date) %></td>
+    <%= project_duration(basis_date, evm) %>
     <td><%= evm.bac(working_hours_per_day) %></td>
     <td><%= evm.complete_ev(working_hours_per_day) %></td>
     <td><%= evm.today_pv(working_hours_per_day) %></td>

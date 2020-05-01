@@ -6,25 +6,26 @@ module EvmCreator
   include CalculateEvmLogic2
   include DataFetcher
 
-  # Culculation of EMM
-  def evm_create(basis_date)
-    projects_evm = {}
-    target_project_ids = project_ids_in_member
-    target_project_ids.each do |proj_id|
-      issues = evm_issues proj_id
-      issues_costs = evm_costs proj_id
-      projects_evm[proj_id] = CalculateEvmLogic2::CalculateEvm2.new basis_date, issues, issues_costs
-    end
-    projects_evm
+  # project evm
+  def create_project_evm(basis_date, selected_status)
+    projects = target_projects selected_status
+    calculate_evm basis_date, projects
   end
 
-  # Project of which the logged-in user is a member
-  def project_ids_in_member
-    ids = []
-    active_projects = Project.where("#{Project.table_name}.status = ?", 1)
-    active_projects.each do |proj|
-      ids << proj.id if User.current.member_of?(proj)
+  def target_projects(status)
+    Project.where(status: status).
+      where("projects.id IN (select project_id FROM members WHERE user_id = ?)", User.current.id)
+  end
+
+  def calculate_evm(basis_date, projects)
+    evm = {}
+    projects.each do |proj|
+      issues = evm_issues proj.id
+      issues_costs = evm_costs proj.id
+      evm[proj.id] = CalculateEvmLogic2::CalculateEvm2.new basis_date, issues, issues_costs
+      evm[proj.id].project_name = proj.name
+      evm[proj.id].project_status = proj.status
     end
-    ids
+    evm
   end
 end

@@ -24,3 +24,6 @@
   padding: 2px;
   text-align: center;
 }
+td.duration-indicator-red {
+  color: #FF0000;
+}

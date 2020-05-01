@@ -7,7 +7,8 @@ class AcrossProjectEvmController < ApplicationController
   def index
     @basis_date = default_basis_date
     @working_hours_per_day = default_work_hour
-    @projects_evm = evm_create @basis_date
+    @selected_status = params[:selected_status] || Project::STATUS_ACTIVE
+    @projects_evm = create_project_evm @basis_date, @selected_status
   end
 
   private
