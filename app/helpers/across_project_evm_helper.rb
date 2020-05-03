@@ -40,4 +40,9 @@ module AcrossProjectEvmHelper
       ""
     end
   end
+
+  # permitted params at download csv
+  def permitted_params(params)
+    params.permit(:basis_date, :working_hours_per_day, selected_status: [])
+  end
 end
