@@ -15,4 +15,9 @@
              locals: { evm: evm,
                        basis_date: @basis_date,
                        working_hours_per_day: @working_hours_per_day } %>
+
+<% end %>
+<!-- CSV download -->
+<% other_formats_links do |f| %>
+  <%= f.link_to "CSV", url: {action: :index, params: params} %>
 <% end %>
