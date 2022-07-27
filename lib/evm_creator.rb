@@ -1,5 +1,5 @@
-require "calculate_evm_logic2"
-require "data_fetcher"
+require_relative "calculate_evm_logic2"
+require_relative "data_fetcher"
 
 # EVM creator module
 module EvmCreator
