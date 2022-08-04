@@ -1,4 +1,4 @@
-require "base_calculate2"
+require_relative "base_calculate2"
 
 # Calculation EVM module
 module CalculateEvmLogic2
